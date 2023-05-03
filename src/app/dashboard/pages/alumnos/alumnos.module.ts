@@ -1,9 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AlumnosComponent } from './alumnos.component';
-import { AbmAlumnosComponent } from './abm-alumnos/abm-alumnos.component';
-import { AlumnoDetalleComponent } from './pages/alumno-detalle/alumno-detalle.component';
-import { PipesModule } from 'src/app/shared/pipes/pipes/pipes.module';
+
+
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatButtonModule } from '@angular/material/button';
 import { ReactiveFormsModule } from '@angular/forms';
@@ -12,37 +11,33 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatTableModule } from '@angular/material/table';
 import { RouterModule } from '@angular/router';
+import { PipesModule } from "../../../shared/pipes/pipes.module";
 
 
 @NgModule({
-  declarations: [
-    AlumnosComponent,
-    AbmAlumnosComponent,
-    AlumnoDetalleComponent
-  ],
-  imports: [
-    CommonModule,
-    MatTableModule,
-    PipesModule,
-    MatFormFieldModule,
-    MatIconModule,
-    MatDialogModule,
-    MatInputModule,
-    MatButtonModule,
-    ReactiveFormsModule,
-    RouterModule.forChild([
-      {
-        path: '',
-        component: AlumnosComponent
-      },
-      {
-        path: ':id',
-        component: AlumnoDetalleComponent,
-      },
-    ]),
-  ],
-  exports: [
-    AlumnosComponent
-  ]
+    declarations: [
+        AlumnosComponent
+    ],
+    exports: [
+        AlumnosComponent
+    ],
+    imports: [
+        CommonModule,
+        MatTableModule,
+        PipesModule,
+        MatFormFieldModule,
+        MatIconModule,
+        MatDialogModule,
+        MatInputModule,
+        MatButtonModule,
+        ReactiveFormsModule,
+        RouterModule.forChild([
+            {
+                path: '',
+                component: AlumnosComponent
+            }
+        ]),
+        PipesModule
+    ]
 })
 export class AlumnosModule { }

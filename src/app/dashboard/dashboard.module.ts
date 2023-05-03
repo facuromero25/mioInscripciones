@@ -22,13 +22,9 @@ import { MatListModule } from '@angular/material/list';
     MatListModule,
     RouterModule.forChild([
       {
-        // http://localhost:XXXX/dashboard/estudiantes
+
         path: 'estudiantes',
         loadChildren: () => import('./pages/alumnos/alumnos.module').then((m) => m.AlumnosModule)
-      },
-      {
-        path: 'cursos',
-        loadChildren: () => import('./pages/cursos/cursos.module').then((m) => m.CursosModule),
       }
     ])
   ],

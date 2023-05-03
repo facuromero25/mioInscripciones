@@ -1,10 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { NombreCompletoPipe } from './pipes/pipes/nombre-completo.pipe';
-import { FontSizeDirective } from './directives/font-size.directive';
 import { DirectivesModule } from './directives/directives.module';
-import { PipesModule } from './pipes/pipes/pipes.module';
-
+import { PipesModule } from './pipes/pipes.module';
 
 
 
@@ -13,13 +10,15 @@ import { PipesModule } from './pipes/pipes/pipes.module';
 
   ],
   imports: [
-    CommonModule
+
+    CommonModule,
   ],
-  exports:[
+  exports: [
+
     DirectivesModule,
     PipesModule,
   ],
-  providers:[
+  providers: [
 
   ]
 })

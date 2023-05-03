@@ -2,17 +2,17 @@
   "usuarios": [
     {
       "id": 1,
-      "nombre": "Josué",
-      "apellido": "Baez",
-      "email": "josue@mail.com",
+      "nombre": "meli",
+      "apellido": "pereyra",
+      "email": "meli@mail.com",
       "password": "123456",
       "token": "hjsdfJHFDSAFMsaDsan12sdanjjadashj3FDBEWH",
       "role": "admin"
     },
     {
-      "nombre": "Facundo",
+      "nombre": "juan",
       "apellido": "Perez",
-      "email": "juan@email.com",
+      "email": "juan@mail.com",
       "password": "123456",
       "token": "nmdsgfjhuMDKSAFJASDK327SJDKANjsadnsah",
       "role": "user",
@@ -21,31 +21,11 @@
     {
       "nombre": "Facundo",
       "apellido": "romero",
-      "email": "facu@email.com",
+      "email": "facu@mail.com",
       "password": "123456",
       "token": "nmddssgfjhuMDKSAFJASDK327SJDKANjsadnsah",
       "role": "user",
       "id": 5
-    }
-  ],
-  "cursos": [
-    {
-      "id": 1,
-      "nombre": "Angular",
-      "fecha_fin": "2023-04-27T01:27:59.631Z",
-      "fecha_inicio": "2023-04-27T01:27:59.631Z"
-    },
-    {
-      "id": 2,
-      "nombre": "Javascript",
-      "fecha_fin": "2023-04-27T01:27:59.631Z",
-      "fecha_inicio": "2023-04-27T01:27:59.631Z"
-    },
-    {
-      "id": 3,
-      "nombre": "Desarrollo Web",
-      "fecha_fin": "2023-04-27T01:27:59.631Z",
-      "fecha_inicio": "2023-04-27T01:27:59.631Z"
     }
   ]
 }

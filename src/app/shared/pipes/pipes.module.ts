@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ControlErrorMessagesPipe } from './control-error-messages.pipe';
 import { NombreCompletoPipe } from './nombre-completo.pipe';
+import { ControlErrorMessagesPipe } from './control-error-messages.pipe';
 
 
 
@@ -13,7 +13,7 @@ import { NombreCompletoPipe } from './nombre-completo.pipe';
   imports: [
     CommonModule
   ],
-  exports:[
+  exports: [
     NombreCompletoPipe,
     ControlErrorMessagesPipe
   ]

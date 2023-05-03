@@ -1,25 +1,20 @@
 import { NgModule, Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AuthComponent } from './auth.component';
-
-import { RegisterComponent } from './pages/register/register.component';
 import { LoginComponent } from './pages/login/login.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import { PipesModule } from '../shared/pipes/pipes/pipes.module';
 import { RouterModule, Routes } from '@angular/router';
 import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
+import { PipesModule } from '../shared/pipes/pipes.module';
+
 const routes: Routes = [
   {
     path: 'login',
     component: LoginComponent
-  },
-  {
-    path: 'register',
-    component: RegisterComponent,
   },
   {
     path: '**',
@@ -34,8 +29,8 @@ const routes: Routes = [
   ],
   imports: [
     CommonModule,
-    ReactiveFormsModule,
     PipesModule,
+    ReactiveFormsModule,
     RouterModule.forChild(routes),
     MatCardModule,
     MatFormFieldModule,

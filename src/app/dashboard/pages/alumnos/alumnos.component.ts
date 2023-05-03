@@ -3,7 +3,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { MatTableDataSource } from '@angular/material/table';
 import { ActivatedRoute, Router } from '@angular/router';
 import { AlumnosService } from './services/alumnos.service';
-import { AbmAlumnosComponent } from './abm-alumnos/abm-alumnos.component';
+
 
 
 
@@ -21,7 +21,7 @@ export interface Alumno {
 export class AlumnosComponent {
   dataSource = new MatTableDataSource<Alumno>();
 
-  displayedColumns: string[] = ['id', 'nombreCompleto', 'fecha_registro', 'ver_detalle', 'eliminar', 'editar'];
+  displayedColumns: string[] = ['id', 'nombreCompleto', 'fecha_registro', 'eliminar', 'editar'];
 
   aplicarFiltros(ev: Event): void {
     const inputValue = (ev.target as HTMLInputElement)?.value;
@@ -40,28 +40,9 @@ export class AlumnosComponent {
       })
   }
 
-  irAlDetalle(alumnoId: number): void {
-    this.router.navigate([alumnoId], {
-      relativeTo: this.activatedRoute,
-    });
-  }
 
-  crearAlumno(): void {
-    const dialog = this.matDialog.open(AbmAlumnosComponent)
-    dialog.afterClosed().subscribe((valor) => {
-      if (valor) {
-        this.dataSource.data = [
-          ...this.dataSource.data,
-          // AGREGANDO NUEVO ELEMENTO:
-          {
-            ...valor, // { nombre: 'xxxxxx', apellido: 'xxxxx' }
-            fecha_registro: new Date(),
-            id: this.dataSource.data.length + 1,
-          }
-        ];
-      }
-    })
-  }
+
+
 
 
   eliminarAlumno(alumnoParaEliminar: Alumno): void {
@@ -70,20 +51,5 @@ export class AlumnosComponent {
     );
   }
 
-  editarAlumno(alumnoParaEditar: Alumno): void {
-    const dialog = this.matDialog.open(AbmAlumnosComponent, {
-      data: {
-        alumnoParaEditar
-      }
-    });
-    dialog.afterClosed().subscribe((valorDelFormulario) => {
-      if (valorDelFormulario) {
-        this.dataSource.data = this.dataSource.data.map(
-          (alumnoActual) => alumnoActual.id === alumnoParaEditar.id
-            ? ({ ...alumnoActual, ...valorDelFormulario}) // { nombre: 'xxxxxx', apellido: 'xxxxx' }
-            : alumnoActual,
-        );
-      }
-    })
-  }
+
 }

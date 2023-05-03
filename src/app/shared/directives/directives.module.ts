@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RepetirDirective } from './repetir.directive';
 import { FontSizeDirective } from './font-size.directive';
+import { RepetirDirective } from './repetir.directive';
 
 
 
@@ -11,9 +11,9 @@ import { FontSizeDirective } from './font-size.directive';
     RepetirDirective
   ],
   imports: [
-    CommonModule
+    CommonModule,
   ],
-  exports:[
+  exports: [
     FontSizeDirective,
     RepetirDirective
   ]
